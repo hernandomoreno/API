@@ -1,4 +1,5 @@
 <?php
+
 class Database {
     //Atributos
     private $host = "localhost";
@@ -45,7 +46,9 @@ class Database {
         } catch (PDOException $e) { //PDO es la forma moderna de conectarse a bd en PHP.
             echo "Error al agregar usuario: " . $e->getMessage();
             return false;
+        }
     }
+
 
     // MÉTODO PARA VERIFICAR SI USUARIO EXISTE PARA CREARLO
     public function usuarioExiste($usuario) {
