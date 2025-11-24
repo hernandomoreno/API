@@ -39,7 +39,7 @@ class Database {
     // MÉTODO PARA AGREGAR USUARIO (REGISTRO)
     public function agregarUsuario($usuario, $password, $nombre, $apellidos, $celular) {
         try {
-            $sql = "INSERT INTO usuarios (usuario, password, nombre, apellidos, celular) VALUES (?, ?, ?, ?, ?)";
+            $sql = "INSERT INTO usuarios (usuario, password, nombres, apellidos, celular) VALUES (?, ?, ?, ?, ?)";
             $stmt = $this->conn->prepare($sql);
             $stmt->execute([$usuario, $password, $nombre, $apellidos, $celular]);
         return true;

@@ -30,6 +30,7 @@
 <a href="index.html">¿Ya tienes cuenta? Inicia sesión</a>
 
 <script>
+
 document.getElementById("formRegistro").addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -44,6 +45,7 @@ document.getElementById("formRegistro").addEventListener("submit", async (e) => 
     const respuesta = await fetch("http://localhost/api/register.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        //Convierte el objeto JavaScript a JSON.
         body: JSON.stringify(data)
     });
 
