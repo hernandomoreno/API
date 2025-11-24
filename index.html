@@ -33,6 +33,7 @@
     const usuario = document.getElementById("user").value;
     const clave = document.getElementById("pass").value;
 
+    //hace una petición HTTP a la URL - esperar hasta que responda el servidor
     const respuesta = await fetch("http://localhost/api/login.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },

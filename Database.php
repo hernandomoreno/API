@@ -29,6 +29,7 @@ class Database {
             $sql = "SELECT * FROM usuarios WHERE usuario = ? AND password = ?";
             $stmt = $this->conn->prepare($sql);
             $stmt->execute([$usuario, $password]);
+            //Indica que quieres la fila devuelta como un arreglo asociativo
             return $stmt->fetch(PDO::FETCH_ASSOC);
 
         } catch (PDOException $e) {
