@@ -26,7 +26,7 @@ if ($db->usuarioExiste($usuario)) {
 $ok = $db->agregarUsuario($usuario, $clave, $nombre, $apellidos, $celular);
 
 if ($ok) {
-    echo json_encode(["success" => true, "mensaje" => "Usuario registrado"]);
+    echo json_encode(["success" => true, "mensaje" => "Usuario registrado.."]);
 } else {
-    echo json_encode(["success" => false, "mensaje" => "Error al registrar usuario"]);
+    echo json_encode(["success" => false, "mensaje" => "Error al registrar usuario.."]);
 }
